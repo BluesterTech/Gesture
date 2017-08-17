@@ -1,0 +1,7 @@
+#BNF+IAT 1.0 UTF-8;
+!grammar call;
+!slot <key>;
+!start <start>;
+<start>:<key>;
+<key>:下一步|完成|YES|NO|打开手势识别|关闭手势识别;
+

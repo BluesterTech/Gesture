@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/parent"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#000"
+              android:baselineAligned="false"
+              android:orientation="horizontal"
+              android:keepScreenOn="true" >
+    <SurfaceView
+        android:id="@+id/sv_camera"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:visibility="visible" />
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="0dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="维修手册"
+            android:background="#2200FF00"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/ic_title"
+            android:paddingLeft="5dp"
+            android:textSize="12sp"
+            />
+        <ListView
+            android:id="@+id/lv_lsit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:paddingTop="20dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icons2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="0dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_task"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>
+            <!--<SurfaceView-->
+            <!--android:id="@+id/sv_camera"-->
+            <!--android:layout_width="160dp"-->
+            <!--android:layout_height="90dp"-->
+            <!--android:visibility="gone"/>-->
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#00000000" >
+
+            <SurfaceView
+                android:id="@+id/sv_record_camera_view"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:background="#00000000" />
+            <Button
+                android:id="@+id/btn_save_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="保存视频"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
